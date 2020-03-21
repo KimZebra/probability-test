@@ -1,0 +1,23 @@
+나의 지인 중에 코로나 확진자가 한명도 없을 확률은?
+A = 전체
+B = 감염자
+C = 지인
+P = (A-C)_C_B / A_C_B
+여기서 _C_는 콤비네이션 기호임
+위의 식을 직접 계산할 수 없어서 별도의 계산식을 고안함
+위의 식을 풀어 쓰더라도 계산할 수 없는 크기의 계산임
+
+(javascript)
+function factorial2(a,b,c){
+    result = 1;
+    for(i = 0;i<b;i++){
+        result = result * c / a;
+        a--;
+        c--;
+    }
+    return result;
+}
+
+위의 식에서
+a,b,c는 순서대로 A, B, A-C 를 대입하면 됨
+결과는 result에 나옴
